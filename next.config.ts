@@ -1,17 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/rossy-cookies-website",
+  assetPrefix: "/rossy-cookies-website/",
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-    formats: ["image/avif", "image/webp"],
-  },
-  experimental: {
-    optimizePackageImports: ["framer-motion", "lucide-react"],
+    unoptimized: true,
   },
 };
 
